@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper,oneside,twocolumn,landscape]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[russian,landscape]{olymp}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{epsfig}
+\usepackage{epigraph}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{wrapfig} % for having text alongside pictures
+\usepackage{listings}
+\usetikzlibrary{arrows}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+%  aboveskip=3mm,
+%  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+%  breakatwhitespace=true,
+  tabsize=2
+}
+
+\contest
+{Муниципальный тур олимпиады. Пробный тур: простые задачи}
+{Проверьте вашу среду разработки (язык программирования)}
+{и тестирующую систему, решив простые задачи}
+
+\renewcommand{\t}[1]{\ifmmode{\mathtt{#1}}\else{\texttt{#1}}\fi}
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\phi}{\varphi}
+\newcommand{\pow}{\^\relax}
+\newcommand{\bs}{\mbox{$\backslash$}}
+\def\bbZ{\mathbb{Z}}
+\newcommand{\clarify}[1]{{\it *** {#1} ***}}
+\def\prob#1{\input ../problems/#1/#1.tex}
+
+\binoppenalty=10000
+\relpenalty=10000
+\exhyphenpenalty=10000
+
+\createsection{\Illustration}{Иллюстрация}
+\createsection{\Scoring}{Система оценки}
+\createsection{\Note}{Замечание}
+
+\begin{document}
+
+\raggedbottom
+
+\prob{sum}      % сумма
+\prob{string}   % переверните строку
+
+\end{document}

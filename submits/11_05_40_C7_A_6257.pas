@@ -1,0 +1,13 @@
+var
+a,b:integer;
+f1,f2:text;
+begin
+assign(f1,'sum.in');
+reset(f1);
+assign(f2,'sum.out');
+rewrite(f2);
+readln(f1,a,b);
+writeln(f2,a+b);
+close(f1);
+close(f2);
+end.
