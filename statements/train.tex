@@ -19,8 +19,8 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\lstset{frame=tb,
-  language=Java,
+\lstset{frame=single,framerule=0pt,
+  language=C++,
 %  aboveskip=3mm,
 %  belowskip=3mm,
   showstringspaces=false,
@@ -31,15 +31,15 @@
   keywordstyle=\color{blue},
   commentstyle=\color{dkgreen},
   stringstyle=\color{mauve},
-  breaklines=true,
+  breaklines=false,
 %  breakatwhitespace=true,
   tabsize=2
 }
 
 \contest
-{%Муниципальный тур олимпиады. 
-Пробный тур: простые задачи}
-{Проверьте вашу среду разработки (язык программирования)}
+{Муниципальный тур олимпиады. 10 декабря 2015 года.
+Пробный тур 10:20 --- 10:50.}
+{Проверьте настройки вашего комьютера, среды разработки (языка программирования)}
 {и тестирующую систему, решив простые задачи}
 
 \renewcommand{\t}[1]{\ifmmode{\mathtt{#1}}\else{\texttt{#1}}\fi}
@@ -67,7 +67,9 @@
 
 \raggedbottom
 
-\prob{sum}      % сумма
-\prob{string}   % переверните строку
+%\prob{sum}      % сумма
+%\prob{string}   % переверните строку
+
+\input ../problems/problems.tex.inc
 
 \end{document}

@@ -1,16 +1,11 @@
 \def\name{sum}%
-\begin{problem}{А+B}{\name.in}{\name.out}{2 секунды}{}
+\begin{problem}{А+B}{\name.in}{\name.out}{1 секунда}{}
 
-Даны два числа, требуется найти их сумму. Используйте тип \tt{Int64} в Pascal/Delphi, и \tt{long long} в C/C++.
-
-\lstinputlisting[language=Delphi]{../problems/\name/solution.dpr}
-\lstinputlisting[language=C]{../problems/\name/solution.c}
-\lstinputlisting[language=C++]{../problems/\name/solution.cpp}
-\lstinputlisting[language=Python]{../problems/\name/sol.py}
-
+Даны два числа, требуется найти их сумму. Используйте тип \texttt{long long} в C/C++, \texttt{Int64} в Delphi, \texttt{long} в Java.
+                                                                                            
 \InputFile
 
-Два целых числа $A$ и $B$ ($0 \le A,B \le 2^{63}-1$) разделённых пробелом или переводом строки.
+Два целых числа $A$ и $B$ ($0 \le A,B \le 2^{63}-1$), разделённых пробелом или переводом строки.
 
 \OutputFile
 
@@ -23,5 +18,10 @@
 \exmp{ \input ../problems/\name/02 }{ \input ../problems/\name/02.a }% 
 \exmp{ \input ../problems/\name/03 }{ \input ../problems/\name/03.a }% 
 \end{example}
+\lstinputlisting[language=Delphi]{../problems/\name/solution.dpr}
+\lstinputlisting[language=C]{../problems/\name/solution.c}
+\lstinputlisting[language=C++]{../problems/\name/solution.cpp}
+\lstinputlisting[language=Python]{../problems/\name/sol.py}
+\lstinputlisting[language=Java]{../problems/\name/Sum.java}
 
 \end{problem}

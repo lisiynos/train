@@ -1,4 +1,6 @@
+# Python3 
 import sys
-sys.stdin, sys.stdout = open("sum.in", "r"), open("sum.out", "w")
-a, b = map(int, raw_input().split())
+sys.stdin = open("sum.in", "r")
+sys.stdout = open("sum.out", "w")
+a, b = map(int, input().split())
 print (a+b)
