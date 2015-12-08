@@ -7,12 +7,11 @@
 
 using namespace std;
 
-int main()
-{
-    assert(freopen(problem".in", "r", stdin) != NULL);
-    assert(freopen(problem".out", "w", stdout));
-    int a, b;
-    cin >> a >> b;
-    cout << a + b << endl;
-    return 0;
+int main() {
+  assert(freopen(problem".in", "r", stdin) != NULL);
+  assert(freopen(problem".out", "w", stdout));
+  int a, b;
+  cin >> a >> b;
+  cout << a + b << endl;
+  return 0;
 }
