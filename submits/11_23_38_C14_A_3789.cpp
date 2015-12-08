@@ -4,14 +4,13 @@
 
 using namespace std;
 
-int main()
-{
-    freopen("sum.in", "r", stdin);
-    freopen("sum.out", "w", stdout);
+int main() {
+  freopen("sum.in", "r", stdin);
+  freopen("sum.out", "w", stdout);
 
-    int a, b;
-    cin >> a >> b;
-    cout << a + b;
+  int a, b;
+  cin >> a >> b;
+  cout << a + b;
 
-    return 0;
+  return 0;
 }
