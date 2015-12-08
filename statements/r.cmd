@@ -19,3 +19,6 @@ del *.dvi
 del *.ps
 del *.log
 del *.aux
+
+@echo Show PDF
+%CURRENT%.pdf 

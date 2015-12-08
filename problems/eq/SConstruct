@@ -1,0 +1,48 @@
+# -*- coding: windows-1251 -*-
+import os
+import shutil
+from subprocess import call
+
+TestSysDir = "C:\\testsys\\";
+
+TestSysDir = "C:\\testsys\\"
+
+TestLib = 'C:\\testsys\\testlib'
+
+dcc32 = Builder(
+  action='dcc32.exe ${SOURCE.file} -U'+TestLib+' -I'+TestLib,
+  src_suffix = ".dpr",
+  suffix = '.exe',
+  chdir=1
+)
+
+gen = Builder( 
+  action='${SOURCE.file}',
+  chdir=1 
+)
+
+def run1(target, source, env):
+  call(TestSysDir + 'run.exe /r=a')  
+
+run = Builder( 
+  action=run1,
+  chdir=1
+)
+
+env = Environment(
+  ENV = {'PATH' : os.environ['PATH']},
+  BUILDERS = {
+    'Delphi' : dcc32, 
+    'gen' : gen,
+    'run' : run,
+  }
+)
+
+for p in ["solution","check","TestGen"]: env.Delphi(p)
+
+TestInput = [("%02d" % x) for x in xrange(1,20+1)]
+TestAnswer = [("%02d.a" % x) for x in xrange(1,20+1)]
+
+env.gen(TestInput,"TestGen.exe")
+
+env.run(TestAnswer+['run.log','eq.in','eq.out'],[TestSysDir+"run.exe","solution.exe","check.exe"])
